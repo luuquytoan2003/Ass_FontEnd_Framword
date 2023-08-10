@@ -1,0 +1,148 @@
+<div ng-include="'views/layouts/_header_admin.html'"></div>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-sm-2" ng-include="'views/layouts/_sidebar_admin.html'" novalidate></div>
+    
+        <div class="col-sm-10 border rounded">
+            <h4 class="text-center" >Đây là trang quản lí sản phẩm</h4>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModalCreate" >Thêm Sản Phẩm</button>
+            <table class="table table-striped">
+                <thead>
+                    <th>#</th>
+                    <th>Tên Sản Phẩm</th>
+                    <th>Loại Sản Phảm</th>
+                    <th>Giá Sản Phẩm</th>
+                    <th>Mô Tả Sản Phẩm</th>
+                    <th>Chức năng</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="(key,value) in listSP">
+                        <td>{{key+1}}</td>
+                        <td>{{value.tenSP}}</td>
+                        <td>{{value.loaiSP}}</td>
+                        <td>{{value.giaSP}}</td>
+                        <td>{{value.motaSP}}</td>
+                        <td>
+                            <button ng-click="confirmUpdate(value.id)" data-bs-toggle="modal" data-bs-target="#exampleModalEdit" class="btn btn-primary">Sửa</button>
+                            <button ng-click="confirmDelete(value.id)" data-bs-toggle="modal" data-bs-target="#exampleModalDelete" class="btn btn-danger">Xóa</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Modal Create -->
+<div class="modal fade" id="exampleModalCreate"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-top-right">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Thêm Sản Phẩm</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Tên sản phẩm:</label>
+                        <input type="text" class="form-control" ng-model="init.productName" >
+                        <small class="text-danger" ng-show="validate.productName">Vui lòng nhập tên sản phẩm</small>
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Mô tả sản phẩm:</label>
+                        <input type="text" class="form-control" ng-model="init.productDescription">
+                        <span class="text-danger" ng-if="validate.productDescription">Vui lòng nhập mô tả sản phẩm</span>
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Loại sản phẩm:</label>
+                        <select class="form-select" ng-model="init.productType">
+                            <option selected>--Chọn--</option>
+                            <option value="Appe">Appe</option>
+                            <option value="SamSung">SamSung</option>
+                            <option value="Huawe">Huawe</option>
+                            <option value="Xiaomi">Xiaomi</option>
+                            <option value="Nokia">Nokia</option>
+                        </select>
+                        <span class="text-danger" ng-if="validate.productType">Vui lòng chọn loại sản phẩm</span>
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Giá tiền:</label>
+                        <input type="text" class="form-control" ng-model="init.productPrice">
+                        <span class="text-danger" ng-show="validate.productPrice">Vui lòng nhập giá sản phẩm</span>
+                        <span class="text-danger" ng-show="validate.productValuePrice">Giá sản phẩm phải lớn hơn 1000</span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button ng-click="onCreate()" type="button" class="btn btn-primary">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Update -->
+<div class="modal fade" id="exampleModalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-top-right">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sửa Sản Phẩm</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Tên sản phẩm:</label>
+                        <input type="text" class="form-control" ng-model="init.productName">
+                        <small class="text-danger" ng-show="validate.productName">Vui lòng nhập tên sản phẩm</small>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mô tả sản phẩm:</label>
+                        <input type="text" class="form-control" ng-model="init.productDescription">
+                        <span class="text-danger" ng-if="validate.productDescription">Vui lòng nhập mô tả sản
+                            phẩm</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Loại sản phẩm:</label>
+                        <select class="form-select" ng-model="init.productType">
+                            <option selected>--Chọn--</option>
+                            <option value="Appe">Appe</option>
+                            <option value="SamSung">SamSung</option>
+                            <option value="Huawe">Huawe</option>
+                            <option value="Xiaomi">Xiaomi</option>
+                            <option value="Nokia">Nokia</option>
+                        </select>
+                        <span class="text-danger" ng-if="validate.productType">Vui lòng chọn loại sản phẩm</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Giá tiền:</label>
+                        <input type="text" class="form-control" ng-model="init.productPrice">
+                        <span class="text-danger" ng-show="validate.productPrice">Vui lòng nhập giá sản phẩm</span>
+                        <span class="text-danger" ng-show="validate.productValuePrice">Giá sản phẩm phải lớn hơn
+                            1000</span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button ng-click="onUpdate()" type="button" class="btn btn-primary">Sửa</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Delete -->
+<div class="modal fade" id="exampleModalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-top-right">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sửa Sản Phẩm</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Bạn chắc chắn xóa chứ</h6>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button ng-click="onDelete()" type="button" class="btn btn-primary">Chắc chắn</button>
+            </div>
+        </div>
+    </div>
+</div>

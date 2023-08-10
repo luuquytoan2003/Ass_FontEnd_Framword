@@ -1,0 +1,104 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "tenSP": "Iphone 14 Pro Max Plus",
+      "loaiSP": "Appe",
+      "giaSP": "21000000",
+      "motaSP": "Hàng china chất lượng cực thấp"
+    },
+    {
+      "tenSP": "Xiaomi redmi note 11",
+      "loaiSP": "Xiaomi",
+      "giaSP": "1231414",
+      "motaSP": "hàng china khá ổn đấy!",
+      "id": 2
+    },
+    {
+      "tenSP": "Xiaomi redmi note 11",
+      "loaiSP": "Xiaomi",
+      "giaSP": "1231414",
+      "motaSP": "hàng china kém quá",
+      "id": 4
+    },
+    {
+      "tenSP": "Iphone 12",
+      "loaiSP": "Huawe",
+      "giaSP": "10000",
+      "motaSP": "ttttttttttttttttttttttttttttttttttt",
+      "id": 5
+    },
+    {
+      "tenSP": "mạnh đạt",
+      "loaiSP": "Huawe",
+      "giaSP": "14141414",
+      "motaSP": "àagasggggggggg",
+      "id": 7
+    },
+    {
+      "tenSP": "jaffafaf",
+      "loaiSP": "SamSung",
+      "giaSP": "141414",
+      "motaSP": "555gfgsdg",
+      "id": 8
+    },
+    {
+      "tenSP": "tonafaf",
+      "loaiSP": "Huawe",
+      "giaSP": "14414",
+      "motaSP": "14141",
+      "id": 9
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "tenND": "toanlqph",
+      "passND": "12345",
+      "quyenND": "1",
+      "emailND": "toanlqph43841@fpt.edu.vn"
+    },
+    {
+      "id": 1,
+      "tenND": "teonay",
+      "passND": "12345",
+      "quyenND": "2",
+      "emailND": "teohihi@hotmail.com"
+    },
+    {
+      "tenND": "toancoi",
+      "passND": "12345",
+      "quyenND": "2",
+      "emailND": "toancoi0357@gmail.com",
+      "id": 2
+    },
+    {
+      "tenND": "toanne1212rs",
+      "passND": "12345",
+      "quyenND": "2",
+      "emailND": "toanlqph43841@fpt.edu.vn",
+      "id": 3
+    },
+    {
+      "tenND": "jalkfafa",
+      "passND": "14141",
+      "quyenND": "2",
+      "emailND": "toancoi0357@gmail.com",
+      "id": 4
+    },
+    {
+      "tenND": "toanqfak",
+      "passND": "1324214",
+      "quyenND": "2",
+      "emailND": "toanluu0356@gmail.com",
+      "id": 5
+    },
+    {
+      "tenND": "agaga",
+      "passND": "1",
+      "quyenND": "2",
+      "emailND": "toanluu0356@gmail.com",
+      "id": 6
+    }
+  ]
+}

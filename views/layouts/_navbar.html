@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger mb-2">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img width="100"
+                src="public/images/background-orange-fpt-polytechnic-logo-symbol-fpt-group-orange-sa-text-line-png-clipart-removebg-preview.png"
+                alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sản phẩm</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Góp ý</a>
+                </li>
+            </ul>
+            <form class="me-auto d-flex ">
+                <input class="form-control  me-2" type="search" placeholder="Tìm kiếm"
+                    aria-label="Search">
+                <button class="btn btn-outline-light" type="submit"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                    <a href="" class="nav-link active" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a data-bs-toggle="modal" data-bs-target="#exampleModal"  class="nav-link active"><i class="fa-solid fa-user"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Modal -->
+<div class="modal fade" style="width: 400px; left: 36%; top: 28%;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Đăng nhập để có trải nghiệm tốt hơn
+            </div>
+            <div class="modal-footer " >
+                <button onclick="location.href='#!/dang-ki'" type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Đăng kí</button>
+                <button onclick="location.href='#!/dang-nhap'" type="button" data-bs-dismiss="modal" class="btn btn-danger">Đăng nhập</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal cart -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" data-bs-placement="top-right" data-bs-offset="0 0">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>This is the modal body.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
